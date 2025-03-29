@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Der Playboy-Milliardär Manuel Herbert Hey wird Bundeskanzler | Neue Deutsche Rundschau</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        header {
+            background-color: #fff;
+            border-bottom: 1px solid #ddd;
+            padding: 10px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .header-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .header-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 0;
+            border-bottom: 1px solid #e5e5e5;
+        }
+        
+        .header-left {
+            display: flex;
+            align-items: center;
+        }
+        
+        .menu-button {
+            background: none;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+        
+        .menu-text {
+            font-size: 18px;
+            font-weight: 500;
+            color: #333;
+            margin-right: 20px;
+        }
+        
+        .search-button {
+            background: none;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+        }
+        
+        .logo {
+            display: flex;
+            justify-content: center;
+            text-decoration: none;
+        }
+        
+        .logo-text {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            font-size: 42px;
+            font-weight: bold;
+            color: #222;
+            text-align: center;
+            letter-spacing: -1px;
+        }
+        
+        .header-right {
+            display: flex;
+            align-items: center;
+        }
+        
+        .abo-button {
+            color: #333;
+            font-weight: bold;
+            text-decoration: underline;
+            margin-right: 20px;
+            font-size: 16px;
+        }
+        
+        .login-link {
+            color: #333;
+            font-weight: normal;
+            text-decoration: underline;
+            font-size: 16px;
+        }
+        
+        .main {
+            display: flex;
+            margin-top: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        
+        .article {
+            flex: 2;
+            padding: 30px;
+        }
+        
+        .sidebar {
+            flex: 1;
+            padding: 30px;
+            background-color: #f9f9f9;
+            border-left: 1px solid #eee;
+        }
+        
+        .article-header {
+            margin-bottom: 30px;
+        }
+        
+        .category {
+            font-size: 12px;
+            color: #666;
+            text-transform: uppercase;
+            margin-bottom: 5px;
+        }
+        
+        .headline {
+            font-family: 'Times New Roman', serif;
+            font-size: 36px;
+            line-height: 1.2;
+            margin-bottom: 15px;
+            color: #000;
+        }
+        
+        .subheadline {
+            font-size: 22px;
+            font-weight: normal;
+            color: #666;
+            line-height: 1.4;
+            margin-bottom: 20px;
+        }
+        
+        .meta {
+            font-size: 14px;
+            color: #888;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .meta .author {
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        
+        .meta .date {
+            margin-right: 10px;
+        }
+        
+        .meta .comments {
+            display: flex;
+            align-items: center;
+            margin-left: auto;
+        }
+        
+        .featured-image {
+            width: 100%;
+            margin-bottom: 30px;
+            position: relative;
+        }
+        
+        .featured-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        .caption {
+            background-color: rgba(0,0,0,0.7);
+            color: #fff;
+            padding: 10px;
+            font-size: 14px;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+        
+        .article-content {
+            font-size: 18px;
+            line-height: 1.7;
+        }
+        
+        .article-content p {
+            margin-bottom: 20px;
+        }
+        
+        .article-content h2 {
+            font-family: 'Times New Roman', serif;
+            font-size: 24px;
+            margin: 30px 0 20px;
+            color: #000;
+        }
+        
+        .image-container {
+            margin: 30px 0;
+            position: relative;
+        }
+        
+        .image-container img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        .image-container .caption {
+            background-color: rgba(0,0,0,0.7);
+            color: #fff;
+            padding: 10px;
+            font-size: 14px;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+        
+        .sidebar-title {
+            font-family: 'Times New Roman', serif;
+            font-size: 22px;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        .related-news {
+            list-style: none;
+        }
+        
+        .related-news li {
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .related-news a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            font-size: 16px;
+            line-height: 1.4;
+            display: block;
+        }
+        
+        .related-news a:hover {
+            color: #c00;
+        }
+        
+        .related-news .meta {
+            font-size: 12px;
+            margin-top: 5px;
+        }
+        
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 30px 0;
+            margin-top: 50px;
+        }
+        
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .footer-section {
+            flex: 1;
+            margin-right: 30px;
+        }
+        
+        .footer-section:last-child {
+            margin-right: 0;
+        }
+        
+        .footer-title {
+            font-size: 18px;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #555;
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-links a {
+            color: #ddd;
+            text-decoration: none;
+        }
+        
+        .footer-links a:hover {
+            color: #fff;
+            text-decoration: underline;
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            margin-top: 20px;
+            border-top: 1px solid #555;
+            font-size: 14px;
+            color: #aaa;
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .main {
+                flex-direction: column;
+            }
+            
+            .sidebar {
+                border-left: none;
+                border-top: 1px solid #eee;
+            }
+            
+            .footer-content {
+                flex-direction: column;
+            }
+            
+            .footer-section {
+                margin-right: 0;
+                margin-bottom: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-top">
+                <div class="header-left">
+                    <button class="menu-button">
+                        <span class="menu-icon">≡</span>
+                    </button>
+                    <span class="menu-text">Menü</span>
+                    <div class="search-container">
+                        <button class="search-button">
+                            <span class="search-icon">⌕</span>
+                        </button>
+                    </div>
+                </div>
+                <a href="#" class="logo">
+                    <span class="logo-text">Neue Deutsche Rundschau</span>
+                </a>
+                <div class="header-right">
+                    <a href="#" class="abo-button">Jetzt abonnieren</a>
+                    <a href="#" class="login-link">Login</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <div class="container">
+        <div class="main">
+            <article class="article">
+                <div class="article-header">
+                    <div class="category">Politik | Panorama</div>
+                    <h1 class="headline">Der Playboy-Milliardär Manuel Herbert Hey wird Bundeskanzler</h1>
+                    <h2 class="subheadline">Vom gewöhnlichen Studenten zum Milliardär zum Bundeskanzler - Eine außergewöhnliche Erfolgsgeschichte</h2>
+                    <div class="meta">
+                        <span class="author">Von Bernd Sudmann</span>
+                        <span class="date">Aktualisiert am 29.03.2025</span>
+                        <div class="comments">
+                            <span>236 Kommentare</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="featured-image">
+                    <img src="/api/placeholder/1200/600" alt="Manuel Herbert Hey bei seiner Vereidigung im Bundestag">
+                    <div class="caption">Manuel Herbert Hey bei seiner Vereidigung zum Bundeskanzler. © DPA</div>
+                </div>
+                
+                <div class="article-content">
+                    <p>BERLIN, 29. März. Mit 47 Jahren hat Manuel Herbert Hey Geschichte geschrieben: Der E-Commerce-Tycoon und Multi-Milliardär ist der neue Bundeskanzler Deutschlands. Sein Weg dorthin ist so unkonventionell wie spektakulär – und lässt Parallelen zu internationalen Figuren wie dem früheren italienischen Ministerpräsidenten Silvio Berlusconi erkennen.</p>
+                    
+                    <h2>Vom Studenten zum Visionär</h2>
+                    <p>Hey, einst ein gewöhnlicher Student der Wirtschaftswissenschaften an der Technischen Universität Dortmund, hat einen bemerkenswerten Aufstieg hingelegt. Mit einem soliden akademischen Hintergrund – Abschlussnote 1,9 und einer Bachelorarbeit über Plattform-Ökonomie am Beispiel Airbnb in Barcelona – schien sein Weg vorgezeichnet. Nach einem kurzen Abstecher in das Wirtschaftsingenieurwesen an der Hochschule Düsseldorf fand er jedoch nicht sofort seinen Platz in der Geschäftswelt.</p>
+                    
+                    <p>"Mein Leben begann eigentlich erst mit 27 Jahren", erklärte Hey in einem exklusiven Interview mit der NDR. "Ich musste meinen Verstand neu programmieren, um über die konventionellen Grenzen hinauszudenken."</p>
+                    
+                    <h2>Die Geburt eines Imperiums</h2>
+                    <p>Mit gerade einmal 25 Jahren legte Hey gemeinsam mit seinem Partner Robin den Grundstein für die Blenisi Group – heute ein europäisches E-Commerce-Imperium. Was als ambitionierte Idee begann, entwickelte sich schnell zu einem Powerhouse im Direct-to-Consumer-Bereich.</p>
+                    
+                    <p>Die Blenisi Group verbindet unvergleichliche Expertise mit innovativen Strategien und hat sich zur Mission gemacht, die E-Commerce-Landschaft zu revolutionieren. Durch ihr Private-Equity-Modell transformieren sie Unternehmen in Marktführer – ein Konzept, das Hey selbst als das "Blenisi Playbook" bezeichnet.</p>
+                    
+                    <div class="image-container">
+                        <img src="/api/placeholder/1200/600" alt="Manuel Hey auf seiner Luxusyacht im Mittelmeer">
+                        <div class="caption">Manuel Herbert Hey entspannt auf seiner 90-Meter-Yacht "Blenisi Star" vor der Küste von Monaco. © Getty Images</div>
+                    </div>
+                    
+                    <h2>Der deutsche Berlusconi</h2>
+                    <p>Mit 35 erreichte Hey seinen ersten Milliardenstatus, mit 40 wurde er Multi-Milliardär. Sein extravaganter Lebensstil erinnert viele an den ehemaligen italienischen Ministerpräsidenten Silvio Berlusconi – ein Vergleich, den er mit einem Augenzwinkern akzeptiert.</p>
+                    
+                    <p>"Luxus ist nicht nur ein Privileg, sondern eine Lebenseinstellung", philosophiert Hey während er auf seiner 90-Meter-Yacht im Mittelmeer entspannt. Seine Villen an der Côte d'Azur, in München und auf Mallorca sind legendär für ihre opulenten Partys, bei denen sich die Elite aus Wirtschaft, Politik und Showbusiness trifft.</p>
+                    
+                    <p>Anders als sein italienisches Pendant betont Hey jedoch: "Hinter dem Glamour steht immer die harte Arbeit und die Vision, etwas zu verändern."</p>
+                    
+                    <h2>Deutschlands Zukunft neu gestalten</h2>
+                    <p>Mit 47 Jahren hat Hey nun das höchste politische Amt in Deutschland erreicht. Seine Ambitionen sind klar definiert: Deutschland zur Wirtschaftssupermacht Nummer eins der Welt zu machen.</p>
+                    
+                    <p>"Wohlstand ist kein Zufall, sondern das Ergebnis kluger Entscheidungen", erklärt der neue Bundeskanzler. "Mein Ziel ist es, den deutschen Unternehmergeist zu entfesseln und jedem Bürger die Chance zu geben, vom kommenden Wirtschaftsboom zu profitieren."</p>
+                    
+                    <div class="image-container">
+                        <img src="/api/placeholder/1200/600" alt="Manuel Hey bei einer Rede im Bundestag">
+                        <div class="caption">Manuel Herbert Hey bei seiner ersten Rede im Bundestag. © Deutscher Bundestag/Photothek</div>
+                    </div>
+                    
+                    <p>Seine unkonventionellen Methoden haben bereits für Aufsehen gesorgt: Die Einführung eines "Entrepreneurship-Passes" für innovative Start-ups, massive Steueranreize für Forschung und Entwicklung und die radikale Digitalisierung der Verwaltung sind nur der Anfang seiner ambitionierten Agenda.</p>
+                    
+                    <h2>Die Hey-Revolution</h2>
+                    <p>Kritiker mögen seinen flamboyanten Stil belächeln, doch seine Erfolgsgeschichte spricht für sich. Vom Studenten mit durchschnittlichen Noten zum Multi-Milliardär und Bundeskanzler – Manuel Herbert Hey verkörpert das ultimative Versprechen des deutschen Wirtschaftswunders 2.0.</p>
+                    
+                    <p>"Deutschland steht an der Schwelle zu einer neuen Ära des Wohlstands", verspricht Hey mit dem für ihn typischen selbstbewussten Lächeln. "Und ich lade jeden ein, Teil dieser Reise zu werden."</p>
+                </div>
+            </article>
+            
+            <aside class="sidebar">
+                <h3 class="sidebar-title">Weitere Artikel</h3>
+                <ul class="related-news">
+                    <li>
+                        <a href="#">Wirtschaftsexperten reagieren auf Heys Regierungsprogramm: "Ambitioniert, aber nicht unmöglich"</a>
+                        <div class="meta">vor 2 Stunden</div>
+                    </li>
+                    <li>
+                        <a href="#">Die Blenisi-Methode: Wie Hey seine Unternehmensgruppe zum Erfolg führte</a>
+                        <div class="meta">vor 5 Stunden</div>
+                    </li>
+                    <li>
+                        <a href="#">Opposition kritisiert "Kanzler der Superlative": "Politik ist kein Business-Club"</a>
+                        <div class="meta">vor 8 Stunden</div>
+                    </li>
+                    <li>
+                        <a href="#">Heys Wirtschaftsprogramm im Detail: Diese Reformen plant der neue Kanzler</a>
+                        <div class="meta">gestern</div>
+                    </li>
+                    <li>
+                        <a href="#">Vom Playboy zum Staatsmann? Internationale Reaktionen auf Deutschlands neuen Kanzler</a>
+                        <div class="meta">gestern</div>
+                    </li>
+                </ul>
+                
+                <h3 class="sidebar-title">Meistgelesen</h3>
+                <ul class="related-news">
+                    <li>
+                        <a href="#">Porträt: Wer ist Manuel Herbert Hey wirklich?</a>
+                        <div class="meta">142.837 Aufrufe</div>
+                    </li>
+                    <li>
+                        <a href="#">Die 10 teuersten Besitztümer des neuen Bundeskanzlers</a>
+                        <div class="meta">98.412 Aufrufe</div>
+                    </li>
+                    <li>
+                        <a href="#">Hey vs. Musk: Das Duell der Wirtschafts-Titanen</a>
+                        <div class="meta">76.543 Aufrufe</div>
+                    </li>
+                </ul>
+            </aside>
+        </div>
+    </div>
+    
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4 class="footer-title">Über uns</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Impressum</a></li>
+                        <li><a href="#">Redaktion</a></li>
+                        <li><a href="#">Karriere</a></li>
+                        <li><a href="#">Kontakt</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-title">Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">NDR Abo</a></li>
+                        <li><a href="#">Newsletter</a></li>
+                        <li><a href="#">Podcasts</a></li>
+                        <li><a href="#">Apps</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-title">Rechtliches</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Datenschutz</a></li>
+                        <li><a href="#">AGB</a></li>
+                        <li><a href="#">Cookie-Einstellungen</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                © Neue Deutsche Rundschau GmbH 2025. Alle Rechte vorbehalten.
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
