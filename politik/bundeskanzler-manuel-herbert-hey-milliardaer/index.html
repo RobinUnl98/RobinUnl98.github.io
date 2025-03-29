@@ -353,23 +353,19 @@
                 padding: 10px 0;
             }
             
-            .header-left, .logo, .header-right {
-                margin-bottom: 10px;
-                width: 100%;
-                justify-content: center;
-            }
-            
-            .header-left {
-                order: 1;
+            .header-left, .header-right {
+                display: none; /* Hide menu and login elements on mobile */
             }
             
             .logo {
                 order: 0;
-                margin-bottom: 15px;
+                margin: 10px auto;
+                width: 100%;
+                justify-content: center;
             }
             
-            .header-right {
-                order: 2;
+            .logo-text {
+                font-size: 28px; /* Slightly larger to ensure readability */
             }
             
             .meta {
@@ -415,7 +411,7 @@
         
         @media (max-width: 576px) {
             .logo-text {
-                font-size: 24px;
+                font-size: 26px;
             }
             
             .menu-text {
@@ -437,6 +433,15 @@
             
             .article, .sidebar {
                 padding: 15px;
+            }
+            
+            /* Additional mobile optimizations */
+            .container {
+                padding: 0 10px;
+            }
+            
+            header {
+                padding: 5px 0;
             }
         }
     </style>
@@ -484,7 +489,7 @@
                 </div>
                 
                 <div class="featured-image">
-                    <img src="bundeskanzler-hey.png" alt="Manuel Herbert Hey bei seiner Vereidigung zum Bundeskanzler">
+                    <img src="/api/placeholder/1200/600" alt="Manuel Herbert Hey bei seiner Vereidigung zum Bundeskanzler">
                     <div class="caption">Manuel Herbert Hey bei seiner Vereidigung zum Bundeskanzler. © DPA</div>
                 </div>
                 
