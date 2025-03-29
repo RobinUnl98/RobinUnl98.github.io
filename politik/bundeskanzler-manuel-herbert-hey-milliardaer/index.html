@@ -22,6 +22,7 @@
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 15px;
+            width: 100%;
         }
         
         header {
@@ -31,14 +32,7 @@
             position: sticky;
             top: 0;
             z-index: 100;
-        }
-        
-        .header-top {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding-bottom: 10px;
-            border-bottom: 1px solid #eee;
+            width: 100%;
         }
         
         .header-top {
@@ -47,6 +41,7 @@
             align-items: center;
             padding: 12px 0;
             border-bottom: 1px solid #e5e5e5;
+            flex-wrap: wrap;
         }
         
         .header-left {
@@ -80,6 +75,7 @@
             display: flex;
             justify-content: center;
             text-decoration: none;
+            text-align: center;
         }
         
         .logo-text {
@@ -116,6 +112,7 @@
             margin-top: 20px;
             background-color: #fff;
             box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            flex-direction: row;
         }
         
         .article {
@@ -163,6 +160,7 @@
             margin-bottom: 20px;
             display: flex;
             align-items: center;
+            flex-wrap: wrap;
         }
         
         .meta .author {
@@ -285,11 +283,14 @@
         .footer-content {
             display: flex;
             justify-content: space-between;
+            flex-wrap: wrap;
         }
         
         .footer-section {
             flex: 1;
             margin-right: 30px;
+            min-width: 200px;
+            margin-bottom: 20px;
         }
         
         .footer-section:last-child {
@@ -328,10 +329,59 @@
             border-top: 1px solid #555;
             font-size: 14px;
             color: #aaa;
+            width: 100%;
         }
         
         /* Responsive adjustments */
+        @media (max-width: 992px) {
+            .logo-text {
+                font-size: 32px;
+            }
+            
+            .headline {
+                font-size: 32px;
+            }
+            
+            .subheadline {
+                font-size: 20px;
+            }
+        }
+        
         @media (max-width: 768px) {
+            .header-top {
+                flex-direction: column;
+                padding: 10px 0;
+            }
+            
+            .header-left, .logo, .header-right {
+                margin-bottom: 10px;
+                width: 100%;
+                justify-content: center;
+            }
+            
+            .header-left {
+                order: 1;
+            }
+            
+            .logo {
+                order: 0;
+                margin-bottom: 15px;
+            }
+            
+            .header-right {
+                order: 2;
+            }
+            
+            .meta {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .meta .comments {
+                margin-left: 0;
+                margin-top: 5px;
+            }
+            
             .main {
                 flex-direction: column;
             }
@@ -341,13 +391,52 @@
                 border-top: 1px solid #eee;
             }
             
-            .footer-content {
-                flex-direction: column;
+            .article, .sidebar {
+                padding: 20px;
+            }
+            
+            .headline {
+                font-size: 28px;
+            }
+            
+            .subheadline {
+                font-size: 18px;
+            }
+            
+            .article-content {
+                font-size: 16px;
+            }
+            
+            .caption {
+                position: relative;
+                font-size: 12px;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .logo-text {
+                font-size: 24px;
+            }
+            
+            .menu-text {
+                display: none;
+            }
+            
+            .headline {
+                font-size: 24px;
+            }
+            
+            .subheadline {
+                font-size: 16px;
             }
             
             .footer-section {
+                flex: 100%;
                 margin-right: 0;
-                margin-bottom: 30px;
+            }
+            
+            .article, .sidebar {
+                padding: 15px;
             }
         }
     </style>
@@ -395,7 +484,7 @@
                 </div>
                 
                 <div class="featured-image">
-                    <img src="bundeskanzler-hey.png" alt="Manuel Herbert Hey bei seiner Vereidigung zum Bundeskanzler">
+                    <img src="/api/placeholder/1200/600" alt="Manuel Herbert Hey bei seiner Vereidigung zum Bundeskanzler">
                     <div class="caption">Manuel Herbert Hey bei seiner Vereidigung zum Bundeskanzler. © DPA</div>
                 </div>
                 
